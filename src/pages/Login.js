@@ -1,8 +1,13 @@
 import React from 'react'
+import Navbar from '../components/Navbar'
+import { Link } from 'react-router-dom'
 
-class Login extends React.Component{
-    render() {
-        return (
+
+
+const Login = () => (
+    
+        <div>
+        <Navbar></Navbar>
         <div className="container mt-2">
             <div className="row justify-content-center">
                 <div className="col-8 col-md-6">
@@ -16,16 +21,15 @@ class Login extends React.Component{
                         <label for="exampleInputPassword1">Contraseña</label>
                         <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Contraseña"/>
                         </div>
-                        <button type="submit" className="btn btn-primary mt-2">Submit</button>
-                        <p>¿Aún no tienes una cuenta? <a href="">Registrate aquí.</a></p>
+                        <Link type="submit" className="btn btn-primary mt-2" to="/inicio">Submit</Link>
+                        <p>¿Aún no tienes una cuenta? <Link to="/register">Registrate aquí.</Link></p>
                     </form>
                 </div>
             </div>
         </div>
+        </div>
        
             
-        )
-    }
-}
+)
 
 export default Login
